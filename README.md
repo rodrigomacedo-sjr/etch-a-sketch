@@ -5,7 +5,7 @@
 - [x] Basic hover effect
 - [x] Button to generate new grid
 - [x] Random RGB values on hover
-- [ ] Progressive darkening effect
+- [x] Progressive darkening effect
 
 # Insights
 
