@@ -3,6 +3,9 @@ createGrid(16);
 const newButton = document.querySelector(".button");
 newButton.addEventListener("click", generateNewGrid);
 
+const grid = document.querySelector(".grid");
+grid.addEventListener("mouseover", paintSquare);
+
 function createGrid(size) {
   size = Math.round(Number(size));
   const grid = document.querySelector(".grid");
@@ -21,7 +24,7 @@ function createGrid(size) {
 function generateNewGrid() {
   let newSize = prompt("New grid size");
   if (checkInvalidSize(newSize)) {
-    alert("Please enter a valid number! [1, 100]")
+    alert("Please enter a valid number! [1, 100]");
     return;
   }
   deleteGrid();
@@ -37,4 +40,27 @@ function deleteGrid() {
   while (grid.firstChild) {
     grid.removeChild(grid.lastChild);
   }
+}
+
+function paintSquare(e) {
+  const square = e.target;
+
+  if (!square.className || square.className != "square") return;
+
+  square.style.backgroundColor = getRandomColor();
+}
+
+function getRandomColor() {
+  let r = getRandomInt(255);
+  let g = getRandomInt(255);
+  let b = getRandomInt(255);
+  return rgb(r, g, b);
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+
+function rgb(r, g, b){
+  return ["rgb(",r,",",g,",",b,")"].join("");
 }
