@@ -1,10 +1,14 @@
-.grid, .square-row {
-  display: flex;
-  justify-content: space-evenly;
-
+body {
+  background-color: #F1EFEC;
 }
 
-.square-row, .square {
+.grid,
+.square-row {
+  display: flex;
+}
+
+.square-row,
+.square {
   margin: 1px;
   flex-grow: 1;
 }
@@ -25,13 +29,35 @@
 }
 
 .square {
-  background-color: blue;
+  background-color: #D4C9BE;
 
   height: 100%;
   transition: background-color 5s;
 }
 
 .square:hover {
-  background-color: red;
+  background-color: #123458;
   transition: background-color 0s;
+}
+
+.button {
+  font-weight: 500;
+
+  margin: 1vh auto;
+  display: block;
+
+  font-size: 3vh;
+  padding: 0.8vh 3.6vh;
+
+  border: solid #123458 0.5vh;
+  border-radius: 1vh;
+
+  background-color: #D4C9BE;
+  color: #123458;
+
+  transition: opacity 0.2s;
+}
+
+.button:hover {
+  opacity: 0.5;
 }
