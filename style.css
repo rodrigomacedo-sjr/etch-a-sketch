@@ -28,4 +28,10 @@
   background-color: blue;
 
   height: 100%;
+  transition: background-color 5s;
+}
+
+.square:hover {
+  background-color: red;
+  transition: background-color 0s;
 }
