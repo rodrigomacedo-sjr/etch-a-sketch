@@ -4,7 +4,7 @@
 - [x] Create a webpage with a 16x16 of square divs
 - [x] Basic hover effect
 - [x] Button to generate new grid
-- [ ] Random RGB values on hover
+- [x] Random RGB values on hover
 - [ ] Progressive darkening effect
 
 # Insights
