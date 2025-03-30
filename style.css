@@ -1,0 +1,31 @@
+.grid, .square-row {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.square-row, .square {
+  margin: 1px;
+  flex-grow: 1;
+}
+
+.grid {
+  flex-direction: column;
+
+  height: 90vh;
+  width: 90vh;
+
+  margin: auto;
+}
+
+.square-row {
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.square {
+  background-color: blue;
+
+  height: 100%;
+}
