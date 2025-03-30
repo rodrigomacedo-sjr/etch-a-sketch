@@ -45,9 +45,23 @@ function deleteGrid() {
 function paintSquare(e) {
   const square = e.target;
 
-  if (!square.className || square.className != "square") return;
+  if (checkSquare(square)) return;
 
-  square.style.backgroundColor = getRandomColor();
+  updateColor(square);
+  updateOpacity(square);
+}
+
+function checkSquare(element) {
+  return !element.className || element.className != "square";
+}
+
+function updateColor(element) {
+  element.style.backgroundColor = getRandomColor();
+}
+
+function updateOpacity(element) {
+  let oldOpacity = Number(element.style.opacity);
+  element.style.opacity = String(oldOpacity + 0.1);
 }
 
 function getRandomColor() {
@@ -61,6 +75,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
 }
 
-function rgb(r, g, b){
-  return ["rgb(",r,",",g,",",b,")"].join("");
+function rgb(r, g, b) {
+  return ["rgb(", r, ",", g, ",", b, ")"].join("");
 }
