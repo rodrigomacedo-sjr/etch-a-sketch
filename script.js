@@ -62,6 +62,7 @@ function updateColor(element) {
 function updateOpacity(element) {
   let oldOpacity = Number(element.style.opacity);
   element.style.opacity = String(oldOpacity + 0.1);
+  element.style.opacity = String(1);
 }
 
 function getRandomColor() {
